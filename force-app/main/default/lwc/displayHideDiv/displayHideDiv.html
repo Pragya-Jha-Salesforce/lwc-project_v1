@@ -1,0 +1,12 @@
+<template>
+
+    <lightning-input class="addCssagain" type="checkbox" label="Display Div" name="inputCheck" onchange={displayComp}> </lightning-input>
+        <template if:true={inputCheck}>
+            <div class="addcss">Hi {name}!
+                <lightning-input label="Name" value={name} onchange={changeHandler}></lightning-input>
+            </div>
+        </template>     
+        <template iterator:it={animalist}> 
+            <p key={it.value}>{it.value}</p>
+        </template>  
+</template>

@@ -1,0 +1,25 @@
+<template>
+    <lightning-card>
+        <h3 slot="title">
+            <lightning-icon icon-name="utility:connected_apps  " size="small"></lightning-icon>
+            Display Contact for the Related Accounts
+        </h3>
+       
+        <div class="slds-p-around_medium lgc-bg">
+            <lightning-input type="text" label="Enter some text" placeholder="Search Account"></lightning-input>
+            <lightning-button variant="brand" label="Search Account" title="Primary action" class="slds-m-left_x-small"></lightning-button>
+
+        </div>
+        <div>
+                <lightning-datatable
+                    key-field="Id"
+                    data={contacts.data}
+                    columns={columns}
+                        >   
+                 </lightning-datatable>  
+        </div>
+        
+  
+
+    </lightning-card>
+</template>
